@@ -1,0 +1,7 @@
+### Ubuntu 14.04 LTS
+### pacemaker 1.1.10+git20130802-1ubuntu2
+### corosync 2.3.3-1ubuntu1
+### lxc 1.0.5-0ubuntu0.1
+
+Use this script to manage LXC Version > 1 via 'crm shell'
+locate in '/usr/lib/ocf/resource.d/heartbeat/lxc'
