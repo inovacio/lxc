@@ -185,14 +185,6 @@ LXC_stop() {
 		exit $OCF_ERR_GENERIC
 	fi
 
-#	typeset -i PID=0
-#	STATE   =`lxc-info --name "${OCF_RESKEY_container}" --state --no-humanize | head -n 1`
-#	PID     =`lxc-info --name "${OCF_RESKEY_container}" --pid --no-humanize | head -n 1`
-#	if [ "$STATE" == "RUNNING"]; then
-#                ocf_log info "Sending \"OS shut down\" instruction to" ${OCF_RESKEY_container} "as it was found to be using"
-#                kill -PWR $PID
-#	fi
-
         # If the container is still running, it will be stopped now. regardless of state!
 	STATE=`lxc-info --name "${OCF_RESKEY_container}" --state --no-humanize | head -n 1`
 	if [ "$STATE" == "RUNNING" ]; then
