@@ -113,7 +113,6 @@ LXC_usage() {
 END
 }
 
-#####
 cgroup_mounted() {
 # test cgroup_mounted, mount if required
 	# Various possible overrides to cgroup mount point.
@@ -133,7 +132,6 @@ cgroup_mounted() {
 	echo 1 >${CGROUP_MOUNT_POINT}/notify_on_release
 	return 0
 }
-#####
 
 LXC_start() {
 	# put this here as it's so long it gets messy later!!!
@@ -221,8 +219,6 @@ LXC_stop() {
 	done
 }
 
-
-##### DONE
 LXC_status() {
 	# run lxc-info with --state --no-humanize option for LXC 1.0
 	ocf_version_cmp="`lxc-start --version | cut -d' ' -f 3`"
@@ -238,7 +234,6 @@ LXC_status() {
 			fi
 		return $OCF_NOT_RUNNING
 }
-#####
 
 LXC_monitor() {
 	LXC_status && return $OCF_SUCCESS
